@@ -1,0 +1,1176 @@
+---
+format: 
+  revealjs: 
+    embed-resources: true
+    # theme: theme/slides.scss
+    # css: [theme/syntax-highlight.css, theme/custom.css, theme/pacman.css]
+    css: theme.css
+    toc: false
+    footer: "Metodología de Investigación y Validación de Instrumentos con R"
+    logo: img/image.png
+    transition: fade
+    background-transition: fade
+    incremental: false
+    slide-number: c/t
+    height: 900
+    width: 1600
+    chalkboard: false
+    controls: false
+    highlight-style: ayu-mirage
+    multiplex: true
+    touch: true
+    auto-stretch: true
+    link-external-icon: false
+    link-external-newwindow: false
+    self-contained-math: true
+    preview-links: true
+    menu:
+      side: left
+      width: normal
+      numbers: true
+from: markdown+emoji
+execute:
+  echo: false
+  freeze: auto
+cache: true
+---
+
+#  {background="#43464B" background-image="img/p10.png"}
+
+\
+\
+\
+\
+\
+\
+
+<h1>[Sesión 01]{.blanco}</h1>
+
+<h4>Introducción a la Metodología de Investigación y</h4>
+
+<h4>Validación de Instrumentos</h4>
+
+<hr>
+
+<h3>[Christian Vásquez-Velasco, Bach., M.Sc.(c)]{.blanco}</h3>
+
+<h4>[2023]{.blanco}</h4>
+
+![](img/image.png){.absolute top="150" left="950"}
+
+::: footer
+[Curso: Metodología de Investigación y Validación de Instrumentos con R]{.blanco}
+:::
+
+## Objetivos de la Sesión
+
+<hr>
+
+
+::: {.incremental}
+- Comprender la importancia de la investigación y la validación de instrumentos en el ámbito educativo.
+- Familiarizarse con los conceptos fundamentales relacionados con la investigación y la validación de instrumentos.
+- Explorar los diferentes tipos de investigación y diseños de investigación.
+:::
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 1. Presentación del curso y objetivos (15 minutos)
+
+<hr>
+
+- Bienvenida a los participantes.
+- Breve introducción del instructor.
+- Presentación de los objetivos del curso.
+
+### 2. Importancia de la investigación y la validación de instrumentos (10 minutos)
+
+<hr>
+
+
+- Discusión sobre por qué la investigación es esencial en el ámbito científico.
+- Resaltar la relevancia de la validación de instrumentos en la toma de decisiones basadas en datos.
+
+### 3. Conceptos fundamentales (30 minutos)
+
+<hr>
+
+
+- Definición de investigación y sus componentes esenciales.
+- Exploración de los conceptos de variables, hipótesis, población y muestra.
+- Explicación de los términos encuesta, validez y confiabilidad y su importancia en la investigación.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 4. Tipos de investigación: cualitativa y cuantitativa (35 minutos)
+
+<hr>
+
+
+- Diferenciación entre investigación cualitativa y cuantitativa.
+- Ejemplos de situaciones en las que se utiliza cada tipo de investigación.
+- Ventajas y desventajas de cada enfoque.
+
+### 5. Nivel y Diseño de investigación (20 minutos)
+
+<hr>
+
+
+- Presentación de los cuatro principales niveles de investigación: exploratorio, descriptivo, correlacional y explicativo.
+- Discusión de cuándo y cómo se utiliza cada diseño de investigación.
+- Ejemplos de investigaciones en el ámbito educativo que emplean estos diseños.
+
+### 6. Preguntas y debate (10 minutos)
+
+<hr>
+
+
+- Invitar a los participantes a hacer preguntas y participar en una discusión abierta.
+- Fomentar la participación activa para aclarar conceptos y fortalecer la comprensión.
+
+#  Importancia de la investigación y la validación de instrumentos
+
+<hr>
+
+## Introducción
+
+<hr>
+
+La investigación y la validación de instrumentos son pilares fundamentales en el ámbito académico. En esta sección, exploraremos por qué son esenciales y cómo contribuyen al mejoramiento de la calidad de la investigación.
+
+
+## La esencia de la investigación
+
+<hr>
+
+La investigación es una herramienta crítica para comprender, analizar y mejorar el proceso educativo. Aquí hay algunas razones clave por las cuales la investigación es esencial en el ámbito académico:
+
+::: {.incremental}
+- **Información basada en evidencia:** La investigación proporciona evidencia sólida y datos concretos sobre lo que funciona y lo que no en la investigación. Esto permite a los educadores y responsables de la toma de decisiones tomar decisiones informadas y basadas en evidencia para mejorar las prácticas.
+
+- **Mejora continua:** La investigación proporciona una base para la mejora continua en la enseñanza y el aprendizaje. Permite identificar áreas problemáticas y desarrollar estrategias efectivas para abordarlas.
+
+- **Innovación:** La investigación alimenta la innovación en el ámbito científico al descubrir nuevas formas de enseñar y aprender. Esto es especialmente importante en un mundo en constante evolución.
+:::
+
+## Validación de instrumentos y toma de decisiones basada en datos
+
+<hr>
+
+La validación de instrumentos es una parte esencial de la investigación. Aquí se resalta por qué es crucial:
+
+::: {.incremental}
+- **Medición precisa:** Los instrumentos validados permiten una medición precisa de las habilidades, conocimientos y actitudes de una población. Esto es fundamental para evaluar el progreso y el rendimiento de los alumnos.
+
+- **Toma de decisiones informada:** La validación de instrumentos proporciona la base para la toma de decisiones informada. Los resultados confiables y válidos ayudan a identificar áreas de mejora y asignar recursos de manera efectiva.
+
+- **Equidad y justicia:** La validación asegura que las evaluaciones sean justas y equitativas para todos, independientemente de su origen cultural o socioeconómico. Esto es esencial para garantizar un sistema equitativo.
+:::
+
+# Conceptos Fundamentales
+
+<hr>
+
+## Población (N)
+
+<hr>
+
+Es el conjunto de todos los elementos que se desean analizar y que presentan una o varias características en común.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Las parcelas de maíz amarillo duro en la comunidad de Lambayeque durante los meses de abril a agosto de 2021.
+-   Las plantas de arándano variedad Biloxi en el área experimental del vivero, modulo 9.
+-   Los datos del cultivo de pitahaya sembrada en la empresa Agropasión en Olmos, Perú.
+:::
+
+## Muestra (n)
+
+<hr>
+
+Es un subconjunto representativo de elementos provenientes de una problación.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Las parcelas de 10 agricultores de maíz amarillo duro en la comunidad de Lambayeque.
+-   30 plantas de arándano variedad Biloxi en el área experimental del vivero, modulo 9.
+-   Los datos del cultivo de pitahaya cosechadas durante las campañas 2020, 2021 y 2022 en la empresa Agropasión en Olmos, Perú.
+:::
+
+## Unidad elemental
+
+<hr>
+
+Es cada una de las personas, animales, cosas, o entidades que conforman las población en estudio.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Las parcelas de maíz amarillo duro.
+-   Las plantas de arándano.
+-   Las parcelas de pitahaya.
+:::
+
+## Variable
+
+<hr>
+
+Es toda característica que se desea observar, medir o evaluar de las unidades elementales.
+
+Las variables se pueden clasificar en cuantitativas o cualitativas.
+
+![](img/pp1.png){.absolute top="300" left="550" height="400"}
+
+------------------------------------------------------------------------
+
+### Variable cualitativa
+
+Proporcionan datos que dan como resultado una categoría. Pueden ser de tipo nominal u ordinal.
+
+#### Nominales
+
+Son aquellos cuyos valores o resultados pueden ser organizados y presentados en cualquier orden.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Forma de la hoja bandera del maíz.
+-   Tipo de dentadura del grano de maíz.
+-   Variedad de arándano.
+:::
+
+------------------------------------------------------------------------
+
+#### Ordinales
+
+Son aquellas cuyos valores o resultados deben ser organizados y presentados en orden definido.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Grado de instrucción del agricultor.
+-   Tono de maduración de las bayas del arándano.
+:::
+
+
+------------------------------------------------------------------------
+
+### Variable cuantitativa
+
+Son aquellas cuyos valores pueden ser expresados en forma numérica, Pueden ser discretas o continuas.
+
+#### Discreta
+
+Son aquellas que tienen un número finito o infinito numerable de valores posibles. Por lo general se obtienen mediante conteo.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Número de hojas por planta.
+-   Número de insectos por metro cuadrado.
+:::
+
+
+------------------------------------------------------------------------
+
+#### Continua
+
+Son aquellas que tienen una cantidad infinita o no numerable de valores posibles. Por lo general se puede obtener mediante instrumentos de medición.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Diámetro de fruto.
+-   Peso de fruto.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp6.png){.absolute top="300" left="450" height="400"}
+:::
+
+------------------------------------------------------------------------
+
+### Otra forma de clasificación de variables
+
+Otra forma de clasificación de las varibales es según su escalada de medida. De esta manera la clasificación sería:
+
+![](img/pp2.png){.absolute top="300" left="550" height="400"}
+
+------------------------------------------------------------------------
+
+#### Nominal
+
+Los datos son etiquetas o nombres que se emplean para definir un atributo del elemento.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Estado civil.
+-   Profesión.
+-   Género.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp3.png){.absolute top="300" left="550" height="400"}
+:::
+
+
+------------------------------------------------------------------------
+
+#### Ordinal
+
+Los datos son etiquetas y además se pueden ordenar de forma ascendente o descendente.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Nivel de apreciación o calidad de un fruto.
+-   Curvatura de las ramas u hojas con respecto al tallo.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp4.png){.absolute top="400" left="350" height="400"}
+:::
+
+------------------------------------------------------------------------
+
+#### Intervalo
+
+Los datos son numéricos, el cero es **relativo**, es decir, no indica ausencia de la característica medida.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Temperatura (°F o °C).
+-   Fechas del calendario.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp5.jpg){.absolute top="400" left="400" height="400"}
+:::
+
+------------------------------------------------------------------------
+
+#### Razón:
+
+Los datos son numéricos, el cero es **absoluto**, es decir, indica la ausencia de característica medida.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Peso.
+-   Estatura.
+-   Salario.
+-   Diámetro.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp7.png){.absolute top="300" left="550" height="400"}
+:::
+
+## Observación
+
+<hr>
+
+Es el dato registrado, producto de la *medición* o apreciación de una característica en una unidad elemental.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   El ingreso mensual de la empresa agroexportadora Chapisol, producto de las ventas de arándano.
+-   El calibre de una baya de vid.
+:::
+
+::: {.fragment .fade-in}
+![](img/pp8.jpg){.absolute top="400" left="550" height="400"}
+:::
+
+## Parámetro
+
+<hr>
+
+Es una medida que resume los datos provenientes de la población. Es decir es una función de todas las observaciones de una población.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Luego de realizar un censo a los agricultores del distrito de Túcume se obtuvo que el ingreso medio mensual fue de 920 soles.
+:::
+
+## Estadístico
+
+<hr>
+
+Es una medida que resume los datos provenientes de la muestra.
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+
+-   Luego de realizar un muestreo a 30 agricultores del distrito de Túcume se obtuvo que el ingreso medio mensual fue de 950 soles.
+-   Luego de un muestreo a 10 bayas por planta en 50 plantas de vid en un módulo de riego de 50 hectáreas, se determinó que el calibre promedio de las bayas de vid fue de 20.9 mm.
+:::
+
+## Encuesta
+
+<hr>
+
+Una encuesta es una herramienta de investigación que implica la recopilación sistemática de datos de un grupo de individuos o de una muestra representativa de una población más grande. Estos datos se obtienen a través de una serie de preguntas estructuradas y/o abiertas que se plantean a los encuestados. El objetivo principal de una encuesta es recopilar información específica y relevante sobre actitudes, opiniones, creencias o comportamientos de las personas con el fin de analizar, interpretar y utilizar estos datos para tomar decisiones informadas en diversas áreas, como la academia, la industria o el gobierno.
+
+## Validez
+
+<hr>
+
+La validez se refiere a la medida en que una herramienta de medición, como una encuesta, mide realmente lo que se supone que debe medir de manera precisa y confiable. En el contexto de una encuesta, la validez implica evaluar si las preguntas formuladas capturan de manera efectiva el concepto o fenómeno que se está investigando. La validez puede dividirse en varios tipos, como la validez de contenido (si las preguntas reflejan adecuadamente el concepto), la validez de criterio (si los resultados de la encuesta se correlacionan con un estándar conocido) y la validez de constructo (si las preguntas miden de manera precisa un constructo teórico).
+
+## Confiabilidad
+
+<hr>
+
+La confiabilidad se refiere a la consistencia y estabilidad de una herramienta de medición a lo largo del tiempo y en diferentes situaciones. En el contexto de una encuesta, la confiabilidad implica que si se administrara la misma encuesta a la misma población en diferentes momentos o por diferentes encuestadores, se obtendrían resultados similares o consistentes. La confiabilidad se puede evaluar utilizando estadísticas como el coeficiente alfa de Cronbach, que mide la consistencia interna de un conjunto de preguntas en una encuesta. Una encuesta confiable es esencial para obtener resultados consistentes y confiables que puedan ser interpretados y utilizados para la toma de decisiones.
+
+## Deficinión de Estadística
+
+<hr>
+
+Es la ciencia que se ocupa de la creación, desarrollo y aplicación de técnicas que permiten hacer un análisis confiable de una población.
+
+En terminos generales, se ocupa de la colección, resumen, presentación, análisis e interpretación de datos y resultados, de modo tal que pueda evaluarse la confiabilidad y riesgos asociados a las conclusiones que se puedan derivar a partir de los datos captados.
+
+## División de la Estadística
+
+<hr>
+
+### Descriptiva
+
+Son técnicas de recolección, caracterización, resumen y presentación que permiten `describir` un conjunto de datos.
+
+Con un análisis descriptivo, se pueden obtener indicadores (estimaciones puntuales). tablas de frecuencia (o contingencia) y gráficos.
+
+Para realizar el análisis descriptivo se debe tener en cuenta el tipo de variable que se está analizando (cualitativa o cuantitativa) y la cantidad de variables que se están analizando a la vez (univariada, bivariada o multivariada).
+
+------------------------------------------------------------------------
+
+### Inferencial
+
+Son técnicas para estimar parámetros de una población o tomar decisiones sobre la población basadas en el resultado de una muestra. Estas conclusiones pueden tener cierto margen de error; por eso, se dan con una medida de confiabilidad o probabilidad.
+
+Comprende la estimación de intervalos de confianza y la realización de pruebas de hipótesis para uno o varios parámetros.
+
+Al igual que el análisis descriptivo para realizar un inferencial se debe tener en cuenta la naturaleza de la variable (si los datos provienen de alguna distribución teórica), el tipo de variable y la cantidad de variables involucradas en el análisis.
+
+------------------------------------------------------------------------
+
+### Paramétrica
+
+Utiliza cálculos y procedimientos asumiendo que conoce cómo se distribuye la variable aleatoria a estudiar.
+
+### No paramétrica
+
+No requiere del conocimiento de la distribución de la variable aleatoria a estudiar.
+
+## ¿Qué es Ciencia de datos? {background="#43464B" background-image="img/pp9.jpg"}
+
+<hr>
+
+::: {.fragment .fade-in}
+La ciencia de datos es una disciplina que se enfoca en extraer conocimiento y entendimiento a partir de datos.
+:::
+
+::: {.fragment .fade-in}
+La ciencia de datos involucra varios pasos, incluyendo la recolección de datos, su limpieza y procesamiento, el análisis exploratorio de los datos, y la construcción de modelos y algoritmos para hacer predicciones y tomar decisiones. 
+:::
+
+::: {.fragment .fade-in}
+Es importante destacar que la ciencia de datos no se trata solo de la tecnología o los algoritmos que se utilizan, sino también de la comprensión de los datos y la interpretación de los resultados.
+:::
+
+## Habilidades para Ciencia de datos {background="#43464B" background-image="img/pp11.jpg"}
+
+<hr>
+
+::: incremental
+
+-   Conocimientos de programación.
+-   Conocimientos en estadística.
+-   Habilidades en visualización de datos.
+-   Curiosidad y habilidades de resolución de problemas.
+-   Capacidad de trabajo en equipo.
+:::
+
+## Aprendizaje estadístico {background="#43464B" background-image="img/pp13.png"}
+
+<hr>
+
+El aprendizaje estadístico, es el **proceso de aprendizaje a partir de los datos** que se enfoca en desarrollar algoritmos y modelos estadísticos que permiten a las máquinas aprender de manera autónoma a partir de datos. En otras palabras, se trata de enseñar a las computadoras cómo identificar patrones y relaciones en los datos y utilizar esta información para hacer predicciones o tomar decisiones. Aplicando *métodos estadísticos* a un conjunto de datos podemos sacar conclusiones acerca de las relaciones entre variables (**inferencia**) o encontrar una función predictiva para nuevas observaciones (**predicción**).
+
+En el contexto de la agricultura, el aprendizaje estadístico puede ser muy útil para analizar grandes cantidades de datos recopilados de diferentes fuentes, como por ejemplo los datos climáticos, los datos de los cultivos, los datos de los suelos, entre otros. Estos datos pueden ser utilizados para desarrollar modelos predictivos que permitan tomar decisiones informadas y mejorar la productividad de los cultivos, la calidad de los productos agrícolas, y optimizar el uso de los recursos naturales.
+
+## Aprendizaje Supervisado y No Supervisado {.smaller}
+
+<hr>
+
+El aprendizaje estadístico supervisado implica el uso de datos etiquetados, es decir, datos que tienen una etiqueta que indica la respuesta o la variable de salida que se está tratando de predecir. El objetivo del aprendizaje supervisado es crear un modelo que pueda predecir la etiqueta de los nuevos datos de entrada. Por ejemplo, si tenemos datos sobre el rendimiento de diferentes variedades de cultivos junto con información sobre las condiciones ambientales en las que se cultivaron, podemos usar el aprendizaje supervisado para crear un modelo que prediga el rendimiento de una nueva variedad de cultivo en función de sus condiciones ambientales.
+
+El aprendizaje estadístico no supervisado, por otro lado, implica el uso de datos **no etiquetados**, es decir, datos que no tienen una etiqueta de respuesta o variable de salida conocida. El objetivo del aprendizaje no supervisado es descubrir patrones y estructuras ocultas en los datos, como grupos o clusters de observaciones que comparten características similares. En agricultura, el aprendizaje no supervisado se puede utilizar para identificar diferentes tipos de suelo o regiones agrícolas similares en función de características como la composición del suelo, las condiciones climáticas y otros factores.
+
+En resumen, el aprendizaje estadístico supervisado se utiliza para hacer predicciones sobre nuevos datos etiquetados, mientras que el aprendizaje estadístico no supervisado se utiliza para descubrir patrones y estructuras ocultas en los datos no etiquetados. Ambos enfoques tienen aplicaciones útiles en la agricultura y pueden ayudar a los agrónomos a tomar mejores decisiones y mejorar los rendimientos de los cultivos.
+
+## Regresión y Clasificación {.smaller}
+
+<hr>
+
+La regresión se utiliza para predecir una variable numérica (como el rendimiento de un cultivo) en función de otras variables independientes (como la cantidad de agua, nutrientes y otros factores ambientales). La clasificación, por otro lado, se utiliza para asignar objetos o eventos a una o más categorías o clases (como la clasificación de cultivos según su tipo).
+
+Un ejemplo para explicar la diferencia entre ambas técnicas sería:
+
+Supongamos que queremos predecir el rendimiento de un cultivo de trigo en función de la cantidad de agua y nutrientes que se le proporciona. En este caso, la regresión se puede utilizar para encontrar una relación entre estas variables y el rendimiento del cultivo. Por ejemplo, podemos usar una técnica de regresión para encontrar una ecuación *f* que nos permita predecir el rendimiento del cultivo en función de la cantidad de agua y nutrientes que recibe.
+
+Por otro lado, si queremos clasificar diferentes tipos de cultivos según sus características, como la altura, el color y la forma de las hojas, la clasificación se puede utilizar para asignar cada cultivo a una o más clases. Por ejemplo, podemos usar una técnica de clasificación para identificar diferentes tipos de hierbas según sus características físicas y bioquímicas.
+
+En resumen, la regresión se utiliza para predecir variables numéricas, mientras que la clasificación se utiliza para asignar objetos o eventos a una o más categorías o clases (variable categórica).
+
+## Enfoques Paramétrico y No Paramétrico {.smaller}
+
+<hr>
+
+El enfoque paramétrico y no paramétrico son dos enfoques diferentes en estadística que se utilizan en diferentes situaciones y con diferentes tipos de datos.
+
+El enfoque paramétrico asume que los datos siguen una distribución específica, como la distribución normal, y se utilizan modelos estadísticos con parámetros definidos para ajustar los datos. Estos modelos permiten hacer inferencias estadísticas más precisas y fiables, pero requieren que se cumplan ciertas suposiciones sobre los datos y la distribución que pueden no ser siempre ciertas en la práctica.
+
+Por otro lado, el enfoque no paramétrico no hace suposiciones sobre la distribución de los datos y utiliza métodos estadísticos más flexibles para analizar los datos. Este enfoque es más adecuado cuando no se conoce la distribución de los datos o cuando los datos son muy variables y no se ajustan a un modelo paramétrico específico. Sin embargo, los métodos no paramétricos pueden ser menos precisos y requieren un mayor número de datos para alcanzar la misma precisión que los métodos paramétricos.
+
+En el ámbito de la agricultura, el enfoque paramétrico puede ser utilizado para ajustar modelos a datos que se ajusten a una distribución conocida, como los rendimientos de los cultivos que siguen una distribución normal. El enfoque no paramétrico puede ser utilizado cuando no se conoce la distribución de los datos, por ejemplo, cuando se analizan los efectos de diferentes tipos de suelo en el crecimiento de las plantas y no se sabe qué distribución sigue la variable de respuesta.
+
+En resumen, el enfoque paramétrico y no paramétrico son dos enfoques diferentes en estadística que se utilizan en diferentes situaciones y con diferentes tipos de datos. Es importante entender cuándo utilizar cada enfoque para poder realizar análisis estadísticos adecuados y precisos en el campo de la investigación.
+
+
+# Investigación
+
+<hr>
+
+--------------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+Según la RAE: se refiere al acto de llevar a cabo estrategias para descubrir algo.
+:::
+
+::: {.fragment .fade-in}
+Conjunto de procesos sistemáticos, críticos y empíricos que se aplican al estudio de un fenómeno o problema con el objetivo de ampliar su conocimiento.
+:::
+
+## Enfoques de investigación
+
+<hr>
+
+::: {.fragment .fade-in}
+### Cuantitativa o cuantificable
+:::
+
+::: {.fragment .fade-in}
+Las variables se pueden medir de forma numérica e interpretar mediante estadística.
+:::
+
+::: {.fragment .fade-in}
+Del latín "quantitas" está vinculado a conteos numéricos y métodos matemáticos...
+:::
+
+::: {.fragment .fade-in}
+Representa un conjunto de procesos organizados de manera secuencial para comprobar ciertas suposiciones.
+:::
+
+::: {.fragment .fade-in}
+Parte de una idea que se delimita y, una vez acotada, se generan objetivos, preguntas de investigación, se revisa la literatura y se construye un marco o prospectiva teórica.
+:::
+
+::: {.fragment .fade-in}
+De las preguntas se derivan hipótesis y determinan y definen variables; se traza un plan (diseño) para probar las hipótesis; se seleccionan casos o unidades para medir en estas las variables en un contexto específico (lugar y tiempo).
+:::
+
+::: {.fragment .fade-in}
+Se analizan y vinculan las mediciones obtenidas (utilizando métodos estadísticos), y se extrae una serie de conclusiones respecto de la o las hipótesis.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Cualitativa o cualificable
+:::
+
+::: {.fragment .fade-in}
+La recolección de información emplea distintos métodos y los datos no son analizados numérica o estadísticamente.
+:::
+
+::: {.fragment .fade-in}
+Del latín "qualitas", hace referencia a la naturaleza, carácter y propiedades de los fenómenos.
+:::
+
+::: {.fragment .fade-in}
+Estudia fenómenos de manera sistemática. Sin embargo, en lugar de comenzar con una teoría y luego [*voltear*]{.underline} al mundo empírico para confirmar si está es apoyada por los datos y resultados.
+:::
+
+::: {.fragment .fade-in}
+El investigador comienza el proceso examinando los hechos en sí y revisando los estudios previos, ambas acciones de manera simultanea, a fin de generar una teoría que sea consistente con lo que está observando.
+:::
+
+::: {.fragment .fade-in}
+Se plantea un problema de investigación, pero normalmente no es tan específico como en la investigación cuantitativa. Va enfocándose paulatinamente. El diseño se va descubriendo o construyendo de acuerdo al contexto y eventos ocurrentes.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Mixto, híbrido o pragmático
+:::
+
+::: {.fragment .fade-in}
+Entrelaza los enfoques anteriores (cuantitativo y cualitativo), pero, es más que una adición de estas, pues, implica su interacción y potenciación.
+:::
+
+::: {.fragment .fade-in}
+Representan un conjunto de procesos sistemáticos, empíricos y críticos de investigación e implican la recolección y el análisis de datos tanto cuantivativos como cualitativos, así como su integración y discusión conjunta.
+:::
+
+::: {.fragment .fade-in}
+Para realizar inferencias producto de toda la información recabada (denominadas metainferencias) y lograr un mayor entendimiento del fenómeno bajo estudio.
+:::
+
+## Tipos de investigación
+
+<hr>
+
+::: {.fragment .fade-in}
+### Teórica o básica
+:::
+
+::: {.fragment .fade-in}
+Crean conceptos sobre variables, teorías o leyes.
+:::
+
+::: {.fragment .fade-in}
+### Aplicada
+:::
+
+::: {.fragment .fade-in}
+Usan conceptos de variables para generar nuevos conocimientos. Replican diseños de investigaciones realizadas anteriormente.
+:::
+
+## Niveles de investigación
+
+<hr>
+
+::: {.fragment .fade-in}
+### Exploratorio
+:::
+
+::: {.fragment .fade-in}
+Examinar un fenómeno o problema de investigación nuevo o poco estudiado sobre el cual se tiene muchas dudas o no se han abordado antes.
+:::
+
+::: {.fragment .fade-in}
+La revisión de literatura revela que existen solo guías (no investigaciones) e ideas vagamente relacionadas con el problema de estudio, o bien, si deseamos indagar sobre temas y áreas desde nuevas perspectivas.
+:::
+
+::: {.fragment .fade-in}
+Sirven para obtener información sobre la posibilidad de llevar a cabo una investigación más completa y profunda respecto de un contexto particular identificar conceptos o variables promisorias a indagar, establecer prioridades para futuros estudios o sugerir afirmaciones, hipótesis y postulados.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+Son comunes en situaciones en las que existe pocos datos. Generalmente no constituyen en fin en sí mismos.
+:::
+
+::: {.fragment .fade-in}
+Determinan tendencias, identifícan áreas, ambientes, contextos y situaciones de estudio, relaciones potenciales entre variables; o establecen el tono y dirección de investigaciones más elaboradas y rigurosas.
+:::
+
+::: {.fragment .fade-in}
+Son más flexibles en su método de investigación (a comparación de los otros niveles), y son más amplias y dispersas.
+:::
+
+::: {.fragment .fade-in}
+Implican un mayor riesgo y requieren de gran paciencia, serenidad y receptividad por parte del investigador.
+:::
+
+::: {.fragment .fade-in}
+En resumen, el nivel de investigación exploratorio no posee un objetivo en sí, no posee metodología de investigación definida, no necesita de una hipótesis y puede emplear cualquier modelo estadístico.
+:::
+
+::: {.fragment .fade-in}
+Sirven para preparar el terreno. Anteceden a investigaciones con alcances descriptivos, correlacionales o explicativos.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Descriptivo
+:::
+
+::: {.fragment .fade-in}
+Especificar las propiedades, características y perfiles de cualquier fenómeno que se someta a un análisis.
+:::
+
+::: {.fragment .fade-in}
+Miden o recolectan datos y reportan información sobre diversos conceptos, variables, aspectos, dimensiones o componentes del fenómeno o problema a investigar.
+:::
+
+::: {.fragment .fade-in}
+En un estudio descriptivo el investigador selecciona una serie de variables y después recaba información sobre cada una de ellas, para así representar (describir o caracterizar) lo que investiga.
+:::
+
+::: {.fragment .fade-in}
+Las investigaciones descriptivas son útiles para mostrar con precisión los ángulos o dimensiones de un fenómeno.
+:::
+
+::: {.fragment .fade-in}
+En esta clase de estudios el investigador debe ser capaz de definir, o al menos visualizar, qué se medirá (qué conceptos, variables, componentes, etc) y sobre qué o quienes se recolectarán los datos (personas, grupos, comunidades, objetos, animales, hechos).
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+En resumen, el nivel de investigación descriptivo, tiene como objetivo caracterizar variables empleando estadística descriptiva (medias, medianas, modas, porcentajes, cuartiles, percentiles, varianza, desviación estándar, error estándar, etc). Por lo general, no necesitan hipótesis.
+:::
+
+::: {.fragment .fade-in}
+Son la base de las investigaciones correlacionales. Proporcionan información para llevar a cabo estudios explicativos.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Correlacional
+:::
+
+::: {.fragment .fade-in}
+Conocer la relación o grado que existe entre dos o más conceptos, categorías o variables en un contexto en particular.
+:::
+
+::: {.fragment .fade-in}
+En ocasiones solo se analiza la relación entre dos conceptos o variables, pero con frecuencia se ubican en el estudio vinculaciones entre tres, cuatro o más variables.
+:::
+
+::: {.fragment .fade-in}
+Para evaluar el grado de asociación entre variables, primero miden cada una de ellas (presuntamente correlacionadas) y las describen, y después cuantifican y analizan la vinculación.
+:::
+
+::: {.fragment .fade-in}
+Las investigaciones descriptivas son útiles para mostrar con precisión los ángulos o dimensiones de un fenómeno.
+:::
+
+::: {.fragment .fade-in}
+Su principal utilidad es saber cómo se puede comportar una variable al conocer el comportamiento de otras variables vinculadas.
+:::
+
+::: {.fragment .fade-in}
+Las correlaciones pueden ser positivas (directamente proporcionales) o negativas (inversamente proporcionales).
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+Las investigaciones correlaciones tienen, en alguna medida, un valor explicativo, aunque parcial, ya que el hecho de saber que dos conceptos o variables se relacionan aporta cierta información explicativa.
+:::
+
+::: {.fragment .fade-in}
+Cuanto mayor sea el número de variables que se asocien en el estudio y mayor sea la fuerza de las relaciones, más completa será la explicación.
+:::
+
+::: {.fragment .fade-in}
+En resumen, el nivel de investigación correlacional, relaciona variables mediante estadística correlacional (correlación de Pearson, Spearman, etc.) y por lo tanto necesita una hipótesis.
+:::
+
+::: {.fragment .fade-in}
+Investigaciones que pretenden asociar conceptos, fenómenos, hechos o variables. Miden las variables y su relación en términos estadísticos.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Explicativo
+:::
+
+::: {.fragment .fade-in}
+Van más allá de la descripción de fenómenos, conceptos o variables o establecimiento de relaciones entre estas.
+:::
+
+::: {.fragment .fade-in}
+Están dirigidos a responder por las causas de los eventos y fenómenos de cualquier índole.
+:::
+
+::: {.fragment .fade-in}
+Su interés se centra en explicar por qué ocurre un fenómeno y en que condiciones se manifiesta, o por qué se relacionan dos o más variables.
+:::
+
+::: {.fragment .fade-in}
+En resumen, el nivel de investigación explicativo, explica los fenómenos causa -- efecto mediante estadística inferencial (análisis de varianza, análisis de covarianza, análisis post-hoc, regresiones, superficies de respuesta, etc.) y por lo tanto necesita una hipótesis.
+:::
+
+::: {.fragment .fade-in}
+Investigaciones en las que se tiene como propósito establecer las causas de los sucesos, problemas o fenómenos que se estudian.
+:::
+
+## Diseños de investigación
+
+<hr>
+
+::: {.fragment .fade-in}
+### Según la técnica empleada
+:::
+
+::: {.fragment .fade-in}
+#### Experimental
+:::
+
+::: {.fragment .fade-in}
+Modifican la respuesta de la variable dependiente empleando a la experimentación como técnica de investigación.
+:::
+
+::: {.fragment .fade-in}
+#### No experimental
+:::
+
+::: {.fragment .fade-in}
+Estudia la respuestas de las variables tal y como se muestran en la naturaleza; no emplean la experimentación.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Según el número de evaluaciones
+:::
+
+::: {.fragment .fade-in}
+#### Transversal
+:::
+
+::: {.fragment .fade-in}
+Emplean una sola evaluación (un instante de tiempo) para la recolección de datos cortando transversalmente la línea de tiempo.
+:::
+
+::: {.fragment .fade-in}
+![](img/img01.png){.absolute top="300" left="50" height="200"}
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+#### Horizontal
+:::
+
+::: {.fragment .fade-in}
+Emplean más de una evaluación (evalúan en el horizonte) para la recolección de datos.
+:::
+
+::: {.fragment .fade-in}
+![](img/img02.png){.absolute top="300" left="50" height="200"}
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Según la fuente de recolección de datos
+:::
+
+::: {.fragment .fade-in}
+#### Prospectivo
+:::
+
+::: {.fragment .fade-in}
+Utilizan fuente de información primaria (información o datos recolectados por el investigador).
+:::
+
+::: {.fragment .fade-in}
+#### Retrospectivo
+:::
+
+::: {.fragment .fade-in}
+Emplean fuente de información secundaria (datos de otras investigaciones).
+:::
+
+## Variable
+
+<hr>
+
+::: {.fragment .fade-in}
+Propiedad medida y que forma parte de las hipótesis que se pretenden describir.
+:::
+
+## Tipos de variables
+
+<hr>
+
+::: {.fragment .fade-in}
+### Según la relación que posee
+:::
+
+::: {.fragment .fade-in}
+#### Independiente
+:::
+
+::: {.fragment .fade-in}
+No muestra cambios por efecto de otras variables.
+:::
+
+::: {.fragment .fade-in}
+#### Dependiente
+:::
+
+::: {.fragment .fade-in}
+Varía según la aplicación, efecto o respuesta de otras variables.
+:::
+
+------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Según la naturaleza de los datos
+:::
+
+::: {.fragment .fade-in}
+#### Discretas (int)
+:::
+
+::: {.fragment .fade-in}
+Está comprendida por números enteros o escalas paramétricas y no puede tomar ningún valor decimal u otros valores entre dos consecutivos.
+:::
+
+::: {.fragment .fade-in}
+#### Continuas (dbl - num)
+:::
+
+::: {.fragment .fade-in}
+Está conformada por números enteros y decimales; es decir, puede tomar cualquier valor entre otros dos valores.
+:::
+
+::: {.fragment .fade-in}
+#### Carácteres (chr)
+:::
+
+::: {.fragment .fade-in}
+Está conformada por cualquier valor alfanumérico.
+:::
+
+::: {.fragment .fade-in}
+#### Logíca (log)
+:::
+
+::: {.fragment .fade-in}
+#### Fechas y horas (date)
+:::
+
+::: {.fragment .fade-in}
+#### Categóricas (fct - ord)
+:::
+
+::: {.fragment .fade-in}
+También llamadas factores. Poseen un número limitado de posibles valores. Pueden ser cuantitativas o cualitativa.
+:::
+
+# Experimento
+
+<hr>
+
+--------------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+Es un trabajo previamente planeado en gabinete que sigue determinados principios básicos de experimentación, y en el cual se hace la comparación de los efectos de los tratamientos.
+:::
+
+## Tratamiento
+
+<hr>
+
+::: {.fragment .fade-in}
+Es un término genérico que utilizamos para designar a un método, elemento o material cuyo efecto deseamos medir o comparar en un experimento. A partir de aquí lo llamaremos *factor*.
+:::
+
+## Naturaleza de los tratamientos {.smaller}
+
+<hr>
+
+::: {.fragment .fade-in}
+### Cualitativo
+:::
+
+::: {.fragment .fade-in}
+Poseen características de calidad que lo distinguen como individuo, especies, tipo u objetos de naturaleza diferente.
+:::
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+-   Variedades de caña de azúcar, de cacao.
+
+-   Clones de café.
+
+-   Tipos de poda.
+
+-   Distanciamiento entre plantas.
+
+-   Recipientes para la producción de plantas o especies forestales.
+
+-   Plantas biocidas.
+
+-   Métodos de quiebra de dormancia en semillas.
+
+-   Sustratos para germinación de semillas.
+
+-   Sustratos para producción de plantas.
+:::
+
+--------------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+### Cuantitativo
+:::
+
+::: {.fragment .fade-in}
+Son constituidos por cantidades definidas de ciertos productos.
+:::
+
+::: {.fragment .fade-in}
+**Ejemplos:**
+:::
+
+::: incremental
+-   Concentraciones de aib.
+
+-   Dosis de fertilizantes.
+
+-   Concentraciones de biol.
+
+-   Dosis de bioinsecticidas.
+
+-   Temperatura de almacenamiento.
+
+-   Tiempo de evaluación.
+:::
+
+--------------------------------------------------------------------------------
+
+::: {.fragment .fade-in}
+Tanto para tratamientos cualitativos y cuantitativos, lo llamaremos factores.
+:::
+
+::: {.fragment .fade-in}
+Un factor cualitativo debe ser analizado mediante prueba de medias.
+:::
+
+::: {.fragment .fade-in}
+Un factor cuantitativo debe ser analizado mediante análisis de regresión.
+:::
+
+::: {.fragment .fade-in}
+Un error común en las investigaciones es analizar un tratamiento cuantitativo con pruebas de medias y analizar un factor cualitativo con regresiones.
+:::
+
+## Importancia del uso correcto de la estadística
+
+<hr>
+
+::: {.fragment .fade-in}
+DATOS – ESTADÍSTICA = DATOS
+:::
+
+::: {.fragment .fade-in}
+DATOS + ESTADÍSTICA CORRECTA = VERDAD
+:::
+
+::: {.fragment .fade-in}
+DATOS + ESTADÍSTICA INCORRETA = FALSA VERDAD
+:::
+
+::: {.fragment .fade-in}
+ESTADÍSTICA = COMPROBACIÓN CIENTÍFICA
+:::
+
+## Uso incorrecto de la estadística
+
+<hr>
+
+::: {.fragment .fade-in}
+El uso inapropriado de un análisis puede conducir al investigador a interpretaciones equivocadas, o bien como realizar conclusiones equivocadas y aun así publicar esos resultados.
+:::
+
+::: {.fragment .fade-in}
+El hecho de un estudio haya sido publicado no significa que  este correcto (verdadero).
+:::
+
+# {background-color="#000000" background="#43464B" }
+
+::: r-fit-text
+¿Preguntas?
+:::
+
+## `r fontawesome::fa("mug-saucer", "white")` Hagamos una pausa {background-color="#000000" background="#43464B"}
+
+<hr>
+
+::: r-fit-text
+<center>
+
+Tomemos un descanso de `5 minutos`...
+
+Estire las piernas `r fontawesome::fa("person-walking", "white")`...
+
+Deje de ver las pantallas `r fontawesome::fa("laptop", "white")`...
+
+... cualquier `r fontawesome::fa("laptop", "white")`, las del celular `r fontawesome::fa("mobile", "white")` también.
+
+</center>
+:::
+
+#  {background-color="#000000"}
+

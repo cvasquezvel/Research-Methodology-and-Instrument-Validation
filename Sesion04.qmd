@@ -1,0 +1,176 @@
+---
+format: 
+  revealjs: 
+    embed-resources: true
+    # theme: theme/slides.scss
+    # css: [theme/syntax-highlight.css, theme/custom.css, theme/pacman.css]
+    css: theme.css
+    toc: false
+    footer: "Metodología de Investigación y Validación de Instrumentos con R"
+    logo: img/image.png
+    transition: fade
+    background-transition: fade
+    incremental: false
+    slide-number: c/t
+    height: 900
+    width: 1600
+    chalkboard: false
+    controls: false
+    highlight-style: ayu-mirage
+    multiplex: true
+    touch: true
+    auto-stretch: true
+    link-external-icon: false
+    link-external-newwindow: false
+    self-contained-math: true
+    preview-links: true
+    menu:
+      side: left
+      width: normal
+      numbers: true
+from: markdown+emoji
+execute:
+  echo: false
+  freeze: auto
+cache: true
+---
+
+#  {background="#43464B" background-image="img/p10.png"}
+
+\
+\
+\
+\
+\
+\
+
+<h1>[Sesión 04]{.blanco}</h1>
+
+<h4>Análisis de Datos de Encuestas en R</h4>
+
+<hr>
+
+<h3>[Christian Vásquez-Velasco, Bach., M.Sc.(c)]{.blanco}</h3>
+
+<h4>[2023]{.blanco}</h4>
+
+![](img/image.png){.absolute top="150" left="950"}
+
+::: footer
+[Curso: Metodología de Investigación y Validación de Instrumentos con R]{.blanco}
+:::
+
+## Objetivos de la Sesión
+
+<hr>
+
+En esta sesión, los participantes aprenderán a realizar un análisis de datos de encuestas utilizando el entorno de programación R. Desde la importación de datos hasta el análisis descriptivo, inferencial y la visualización de resultados, se cubrirán todas las etapas esenciales.
+
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 1. Introducción al Análisis de Datos en R (10 minutos)
+
+<hr>
+
+- Importancia del análisis de datos en la toma de decisiones.
+
+- Breve presentación de R y RStudio.
+
+
+### 2. Importación y Manipulación de Datos de Encuestas en R (20 minutos)
+
+<hr>
+
+- Cargar datos desde archivos locales.
+
+- Exploración inicial de los datos.
+
+- Limpieza y manipulación básica.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 3. Análisis Descriptivo de Datos (20 minutos)
+
+<hr>
+
+- Medidas de tendencia central: media, mediana y moda.
+
+- Medidas de dispersión: desviación estándar, rango, percentiles.
+
+- Visualización de datos con gráficos de barras y diagramas de caja.
+
+### 4. Análisis Inferencial (20 minutos)
+
+<hr>
+
+- Pruebas de hipótesis: ejemplo de prueba t.
+
+- Correlación: identificar relaciones entre variables.
+
+- Regresión lineal simple: predecir una variable basada en otra.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 5. Visualización de Datos: Gráficos y Tablas en R (20 minutos)
+
+<hr>
+
+- Creación de gráficos con ggplot2.
+
+- Generación de tablas resumidas con dplyr.
+
+
+### 6. Práctica: Análisis de Datos de Encuestas en R (20 minutos)
+
+<hr>
+
+- Los participantes trabajarán en un conjunto de datos de encuestas.
+
+- Realizarán análisis descriptivos, pruebas de hipótesis, correlación y generarán gráficos y tablas.
+
+### 7. Conclusiones y Sesión de Preguntas (10 minutos)
+
+<hr>
+
+- Recapitulación de los conceptos clave.
+
+- Sesión de preguntas y respuestas.
+
+
+
+# {background-color="#000000" background="#43464B" }
+
+::: r-fit-text
+¿Preguntas?
+:::
+
+## `r fontawesome::fa("mug-saucer", "white")` Hagamos una pausa {background-color="#000000" background="#43464B"}
+
+<hr>
+
+::: r-fit-text
+<center>
+
+Tomemos un descanso de `5 minutos`...
+
+Estire las piernas `r fontawesome::fa("person-walking", "white")`...
+
+Deje de ver las pantallas `r fontawesome::fa("laptop", "white")`...
+
+... cualquier `r fontawesome::fa("laptop", "white")`, las del celular `r fontawesome::fa("mobile", "white")` también.
+
+</center>
+:::
+
+#  {background-color="#000000"}
+

@@ -1,0 +1,667 @@
+---
+format: 
+  revealjs: 
+    embed-resources: true
+    # theme: theme/slides.scss
+    # css: [theme/syntax-highlight.css, theme/custom.css, theme/pacman.css]
+    css: theme.css
+    toc: false
+    footer: "Metodología de Investigación y Validación de Instrumentos con R"
+    logo: img/image.png
+    transition: fade
+    background-transition: fade
+    incremental: false
+    slide-number: c/t
+    height: 900
+    width: 1600
+    chalkboard: false
+    controls: false
+    highlight-style: ayu-mirage
+    multiplex: true
+    touch: true
+    auto-stretch: true
+    link-external-icon: false
+    link-external-newwindow: false
+    self-contained-math: true
+    preview-links: true
+    menu:
+      side: left
+      width: normal
+      numbers: true
+from: markdown+emoji
+execute:
+  echo: false
+  freeze: auto
+cache: true
+---
+
+#  {background="#43464B" background-image="img/p10.png"}
+
+\
+\
+\
+\
+\
+\
+
+<h1>[Sesión 03]{.blanco}</h1>
+
+<h4>Validación de encuestas</h4>
+
+<hr>
+
+<h3>[Christian Vásquez-Velasco, Bach., M.Sc.(c)]{.blanco}</h3>
+
+<h4>[2023]{.blanco}</h4>
+
+![](img/image.png){.absolute top="150" left="950"}
+
+::: footer
+[Curso: Metodología de Investigación y Validación de Instrumentos con R]{.blanco}
+:::
+
+## Objetivos de la Sesión
+
+<hr>
+
+
+::: {.incremental}
+- Comprender la importancia de validar instrumentos de medición.
+- Aprender sobre la validación de contenido y su aplicación.
+- Explorar las técnicas de validación de constructo, incluyendo el Análisis Factorial Exploratorio (AFE) y el Análisis Factorial Confirmatorio (AFC).
+- Aprender a calcular el coeficiente alfa de Cronbach como medida de confiabilidad.
+- Practicar la aplicación de técnicas de validación utilizando R.
+:::
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 1. Importancia de la Validación de Instrumentos (30 minutos)
+
+<hr>
+
+- Introducción a la validación de encuestas.
+- Razones para validar instrumentos.
+- Consecuencias de no validar adecuadamente.
+
+
+### 2. Validación de Contenido (30 minutos)
+
+<hr>
+
+- Qué es la validación de contenido.
+- Proceso de revisión y evaluación por expertos.
+- Ejemplos de preguntas mal formuladas.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 3. Validación de Constructo (30 minutos)
+
+<hr>
+
+- Introducción al Análisis Factorial Exploratorio (AFE).
+- Uso del AFE en la validación de constructo.
+- Introducción al Análisis Factorial Confirmatorio (AFC).
+- Diferencias entre AFE y AFC.
+
+### 4. Confiabilidad y Práctica en R (30 minutos)
+
+<hr>
+
+- Cálculo del coeficiente alfa de Cronbach.
+- Interpretación de los resultados del coeficiente alfa.
+- Demostración práctica de cómo realizar AFE y AFC en R.
+
+#  Importancia de la Validación de Instrumentos
+
+<hr>
+
+## Introducción
+
+<hr>
+
+La validación de encuestas es un proceso crítico en la investigación y recopilación de datos. Consiste en garantizar que los instrumentos de medición, como cuestionarios y escalas, midan de manera precisa y confiable las variables que se pretenden evaluar.
+
+Un cuestionario no validado puede llevar a resultados inexactos y sesgados, lo que a su vez puede conducir a conclusiones erróneas.
+
+
+## Razones para Validar Instrumentos
+
+<hr>
+
+::: {.incremental}
+- **Confiabilidad de los Resultados:** La validación asegura que los resultados sean consistentes y confiables a lo largo del tiempo y en diferentes situaciones. Esto es fundamental para la toma de decisiones informadas.
+
+- **Validez de las Mediciones:** La validación garantiza que las preguntas midan lo que se pretende medir. Esto es esencial para asegurarse de que los datos reflejen con precisión los conceptos que se están investigando.
+
+- **Reducción de Errores:** La validación ayuda a identificar y reducir posibles fuentes de error en las mediciones, como preguntas ambiguas o sesgos implícitos.
+
+- **Credibilidad de la Investigación:** Una investigación respaldada por instrumentos validados es más creíble y aceptada en la comunidad académica y profesional.
+
+- **Ahorro de Tiempo y Recursos:** Validar adecuadamente desde el principio puede ahorrar tiempo y recursos en comparación con tener que corregir problemas en etapas posteriores.
+:::
+
+## Consecuencias de no Validar Adecuadamente:
+
+<hr>
+
+No validar adecuadamente los instrumentos de medición puede tener graves consecuencias:
+
+::: {.incremental}
+- **Resultados Inexactos:** Los datos recopilados pueden no representar la realidad, lo que lleva a decisiones erróneas basadas en información incorrecta.
+
+- **Falta de Credibilidad:** Una investigación con instrumentos no validados carece de credibilidad y puede ser cuestionada por otros investigadores.
+
+- **Desperdicio de Recursos:** La inversión en la recopilación de datos se desperdicia si los resultados no son confiables o válidos.
+
+- **Daño a la Reputación:** La reputación del investigador o la organización puede verse afectada si se publican resultados no válidos.
+:::
+
+
+## Conclusiones
+
+<hr>
+
+
+En resumen, la validación de instrumentos es esencial para garantizar que los datos recopilados sean precisos, confiables y representativos de los conceptos que se están estudiando. No hacerlo adecuadamente puede tener consecuencias negativas en la toma de decisiones y en la credibilidad de la investigación.
+
+# Validación de Contenido
+
+<hr>
+
+
+## Introducción
+
+<hr>
+
+La validación de contenido es un proceso fundamental en el desarrollo de cuestionarios y encuestas. Se refiere a la evaluación crítica y sistemática de las preguntas y elementos que componen un instrumento de medición para garantizar que sean apropiados y relevantes para medir el concepto que se pretende evaluar.
+
+En esencia, se trata de asegurarse de que las preguntas sean claras, pertinentes y adecuadas para medir lo que se desea medir.
+
+## Proceso de Revisión y Evaluación por Expertos {.smaller}
+
+<hr>
+
+La validación de contenido implica la revisión minuciosa de cada pregunta y elemento del cuestionario por parte de expertos en el campo de estudio. Aquí hay un proceso general:
+
+::: {.incremental}
+- **Selección de Expertos:** Identificar a un grupo de expertos en el tema que se va a medir. Estos expertos deben tener un conocimiento profundo en el área relevante.
+
+- **Distribución del Cuestionario:** Proporcionar a los expertos el cuestionario para su revisión. Pueden ser académicos, profesionales o cualquier persona con experiencia relevante.
+
+- **Revisión Individual:** Cada experto revisa el cuestionario de forma independiente y evalúa cada pregunta en términos de claridad, relevancia y adecuación para medir el concepto.
+
+- **Reunión de Expertos:** Los expertos se reúnen para discutir sus evaluaciones. Durante esta reunión, se pueden identificar preguntas problemáticas y realizar modificaciones necesarias.
+
+- **Iteración:** Si es necesario, el cuestionario se modifica en función de las sugerencias de los expertos y se somete a una segunda revisión.
+
+- **Consenso:** Se busca llegar a un consenso sobre las preguntas y elementos del cuestionario. Las preguntas que no cumplan con los estándares son eliminadas o revisadas.
+:::
+
+## Ejemplos de Preguntas Mal Formuladas
+
+<hr>
+
+
+
+::: {.incremental}
+- **Pregunta Ambigua:** "¿Con qué frecuencia haces ejercicio?" Esta pregunta es ambigua porque "frecuencia" puede interpretarse de diferentes maneras. ¿Se refiere a la cantidad de días por semana o al número de horas por sesión?
+
+- **Pregunta de Doble Negación:** "¿No estás en desacuerdo con esta afirmación?" Esta pregunta utiliza una doble negación ("no" y "desacuerdo"), lo que puede confundir a los encuestados.
+
+- **Pregunta Sesgada:** "¿Cuánto tiempo dedicas a actividades útiles en comparación con actividades inútiles?" Esta pregunta contiene juicios de valor ("útiles" vs. "inútiles") que pueden sesgar las respuestas.
+:::
+
+## Formato de Validación por Expertos para Cuestionario {.smaller}
+
+<hr>
+
+**Nombre del Proyecto:**
+
+**Fecha de Revisión:**
+
+**Experto Revisor:**
+
+**Instrucciones para el Experto Revisor:**
+
+Por favor, revise el cuestionario adjunto y proporcione comentarios y sugerencias en cada pregunta y elemento.
+
+Evalúe la claridad, relevancia y adecuación de cada pregunta para medir el concepto deseado.
+
+Si encuentra algún problema con la redacción, estructura o contenido de una pregunta, indíquelo claramente.
+
+Si cree que alguna pregunta es ambigua, difícil de entender o sesgada, señálelo.
+
+Si tiene alguna sugerencia para mejorar una pregunta o elemento, inclúyala en sus comentarios.
+
+Si considera que alguna pregunta no es necesaria o no es relevante para el propósito del cuestionario, hágalo saber.
+
+**Cuestionario a Evaluar:**
+
+Por favor, indique sus comentarios y sugerencias en el espacio proporcionado junto a cada pregunta o elemento.
+
+Pregunta 1:
+
+Comentarios y Sugerencias:
+
+Pregunta 2:
+
+Comentarios y Sugerencias:
+
+Pregunta 3:
+
+Comentarios y Sugerencias:
+
+----
+
+## Formato de Validación por Expertos para Cuestionario {.smaller}
+
+<hr>
+
+Elemento Adicional (si lo hubiera):
+
+Comentarios y Sugerencias:
+
+Comentarios Generales:
+
+Proporcione cualquier comentario general sobre el cuestionario, su estructura o cualquier otro aspecto relevante.
+
+**Firma del Experto Revisor:**
+
+**Fecha:**
+
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Nota
+Este formato es adaptable y puedes imprimirlo o utilizarlo en formato digital para enviarlo a los expertos que realizarán la revisión. Recuerda recopilar los comentarios de varios expertos para obtener una perspectiva completa y valiosa sobre la validez del cuestionario.
+:::
+
+
+## Formato de Validación por Expertos para Cuestionario {.smaller}
+
+<hr>
+
+**Nombre del Proyecto:**
+
+**Fecha de Revisión:**
+
+**Experto Revisor:**
+
+**Instrucciones para el Experto Revisor:**
+
+Por favor, revise el cuestionario adjunto y proporcione una evaluación numérica en una escala del 1 al 5 para cada pregunta y elemento.
+
+Utilice la siguiente escala de evaluación:
+
+- 1: Totalmente inadecuado
+
+- 2: Inadecuado
+
+- 3: Neutral
+
+- 4: Adecuado
+
+- 5: Totalmente adecuado
+
+Evalúe la claridad, relevancia y adecuación de cada pregunta para medir el concepto deseado.
+
+Si encuentra algún problema con la redacción, estructura o contenido de una pregunta, refleje esto en su evaluación.
+
+Si cree que alguna pregunta es ambigua, difícil de entender o sesgada, indíquelo con su evaluación.
+
+Si tiene alguna sugerencia para mejorar una pregunta o elemento, anótela en los comentarios.
+
+Si considera que alguna pregunta no es necesaria o no es relevante para el propósito del cuestionario, refleje esto en su evaluación.
+
+----
+
+## Formato de Validación por Expertos para Cuestionario {.smaller}
+
+<hr>
+
+
+**Cuestionario a Evaluar:**
+
+Por favor, asigne una puntuación del 1 al 5 y proporcione comentarios si es necesario.
+
+Pregunta 1:
+
+Evaluación: [ ] Comentarios:
+
+Pregunta 2:
+
+Evaluación: [ ] Comentarios:
+
+Pregunta 3:
+
+Evaluación: [ ] Comentarios:
+
+...
+
+Elemento Adicional (si lo hubiera):
+
+Evaluación: [ ] Comentarios:
+
+
+----
+
+## Formato de Validación por Expertos para Cuestionario {.smaller}
+
+<hr>
+
+
+**Evaluación General:**
+
+Claridad del Cuestionario (1-5):
+
+Relevancia del Cuestionario (1-5):
+
+Adecuación del Cuestionario (1-5):
+
+**Comentarios Generales:**
+
+Proporcione cualquier comentario general sobre el cuestionario o cualquier otro aspecto relevante.
+
+**Puntuación General:**
+
+Total de Puntos: ________ (Suma de todas las evaluaciones)
+
+**Firma del Experto Revisor:**
+
+**Fecha:**
+
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+## Nota
+Este formato permite una evaluación más objetiva de la validez del cuestionario, y al calcular la puntuación total, puedes obtener una medida cuantitativa de la calidad del cuestionario en función de la revisión de expertos.
+:::
+
+
+## Conclusiones
+
+<hr>
+
+Este formato permite una evaluación más objetiva de la validez del cuestionario, y al calcular la puntuación total, puedes obtener una medida cuantitativa de la calidad del cuestionario en función de la revisión de expertos.
+
+# Validación de Constructo
+
+<hr>
+
+
+## Introducción al Análisis Factorial Exploratorio (AFE)
+
+<hr>
+
+El Análisis Factorial Exploratorio (AFE) es una técnica estadística utilizada en la validación de constructos en la investigación. Su objetivo principal es identificar la estructura subyacente o los factores latentes que pueden explicar las relaciones observadas entre variables. Aquí hay algunos puntos clave:
+
+
+::: {.incremental}
+- **Fundamento Estadístico:** El AFE se basa en la idea de que las variables observadas (preguntas de un cuestionario, por ejemplo) están influenciadas por factores no observados o latentes. Estos factores pueden ser conceptos subyacentes o dimensiones subyacentes que queremos medir.
+
+- **Objetivo:** El objetivo principal del AFE es determinar cuántos factores subyacentes existen y cómo están relacionados con las variables observadas. Ayuda a reducir la dimensionalidad de los datos al identificar patrones subyacentes.
+
+- **Método de Extracción de Factores:** En el AFE, se utilizan métodos como el Método de Componentes Principales o el Método de Máxima Verosimilitud para extraer factores. Estos métodos identifican la estructura de factores que mejor explica la varianza en los datos.
+:::
+
+## Uso del AFE en la Validación de Constructo
+
+<hr>
+
+El AFE es útil en la validación de constructos porque permite evaluar la estructura subyacente de un conjunto de variables observadas. Esto implica:
+
+::: {.incremental}
+- **Identificar la validez convergente y discriminante:** El AFE ayuda a evaluar si las variables que se supone que miden el mismo constructo realmente se agrupan juntas (validez convergente) y si las variables que se supone que miden constructos diferentes se agrupan de manera diferente (validez discriminante).
+
+- **Reducción de dimensiones:** Ayuda a reducir la dimensionalidad de los datos al identificar los factores más importantes y permitir la creación de puntajes de factor para su uso en análisis posteriores.
+
+:::
+
+## Introducción al Análisis Factorial Confirmatorio (AFC)
+
+<hr>
+
+El Análisis Factorial Confirmatorio (AFC) es otra técnica utilizada en la validación de constructos. A diferencia del AFE, en el AFC se prueban modelos específicos que establecen relaciones entre variables observadas y factores subyacentes predefinidos.
+
+::: {.incremental}
+- **Fundamento Estadístico:** El AFC se basa en la confirmación de un modelo teórico predefinido en lugar de explorar la estructura de factores de manera libre.
+
+- **Objetivo:** El AFC busca confirmar si un modelo teórico específico se ajusta bien a los datos observados. Los modelos pueden ser simples o complejos, según las relaciones entre las variables observadas y los factores latentes.
+
+- **Comparación de Modelos:** En el AFC, se utilizan estadísticas como el Chi-cuadrado, los índices de ajuste como el CFI (Comparative Fit Index) y el RMSEA (Root Mean Square Error of Approximation) para evaluar qué tan bien se ajusta el modelo a los datos.
+
+:::
+
+## Diferencias entre AFE y AFC
+
+<hr>
+
+::: {.incremental}
+- **Exploración vs. Confirmación:** La principal diferencia radica en su enfoque. El AFE explora la estructura subyacente, mientras que el AFC confirma un modelo predefinido.
+
+- **Grado de Flexibilidad:** El AFE es más flexible y permite explorar diferentes estructuras de factores, mientras que el AFC es más rígido ya que se basa en un modelo teórico.
+
+- **Uso en la Validación de Constructo:** Ambos métodos son valiosos en la validación de constructos, y su elección depende de los objetivos de investigación y la teoría subyacente.
+:::
+
+# Confiabilidad y Práctica en R
+
+<hr>
+
+## Cálculo del Coeficiente Alfa de Cronbach
+
+<hr>
+
+
+El coeficiente alfa de Cronbach es una medida comúnmente utilizada para evaluar la confiabilidad de un cuestionario o escala. Representa la consistencia interna de las preguntas o ítems en una escala. El coeficiente alfa varía entre 0 y 1, donde valores más cercanos a 1 indican una mayor consistencia interna.
+
+
+## Fórmula del Coeficiente Alfa de Cronbach:
+
+<hr>
+
+
+$$α = (N / (N - 1)) * [1 - (Σs_i^2 / s_t^2)]$$
+
+**Donde:**
+
+$α$ es el coeficiente alfa de Cronbach.
+
+$N$ es el número de ítems o preguntas en la escala.
+
+$s_i^2$ es la varianza de la puntuación en el ítem i.
+
+$s_t^2$ es la varianza total de las puntuaciones en todos los ítems.
+
+
+## Interpretación de los Resultados del Coeficiente Alfa
+
+<hr>
+
+
+- Un valor de alfa mayor a 0.7 generalmente se considera aceptable en la mayoría de las investigaciones.
+
+- Valores más cercanos a 1 indican una mayor consistencia interna y, por lo tanto, una mayor confiabilidad.
+
+- Valores inferiores a 0.7 pueden indicar la necesidad de revisar o eliminar ítems del cuestionario.
+
+## Demostración Práctica en R {.smaller}
+
+<hr>
+
+
+Puedes calcular el coeficiente alfa de Cronbach en R utilizando paquetes como "psych". Aquí hay un ejemplo de cómo hacerlo:
+
+```{r}
+#| echo: true
+
+# Instala y carga el paquete "psych" si aún no está instalado
+# install.packages("psych")
+library(psych)
+
+# Crea una matriz de datos ficticia (reemplázala con tus datos reales)
+datos <- data.frame(
+  Pregunta1 = c(4, 5, 3, 4, 5),
+  Pregunta2 = c(3, 4, 2, 3, 4),
+  Pregunta3 = c(5, 4, 5, 4, 3)
+)
+
+# Calcula el coeficiente alfa de Cronbach
+resultado <- alpha(datos)
+print(resultado)
+```
+
+
+## Demostración Práctica de AFE y AFC en R {.smaller}
+
+<hr>
+
+Para realizar AFE y AFC en R, puedes usar paquetes como "lavaan" y "psych". Aquí hay un ejemplo de cómo realizar AFE y AFC:
+
+```{r}
+#| echo: true
+
+# Instala y carga el paquete "psych" si aún no está instalado
+# install.packages("psych")
+library(psych)
+
+# Crea un conjunto de datos de ejemplo (puedes reemplazar esto con tus propios datos)
+datos <- data.frame(
+  X1 = rnorm(100),
+  X2 = rnorm(100),
+  X3 = rnorm(100)
+)
+
+# Calcula la matriz de correlación
+matriz_correlacion <- cor(datos)
+
+# Realiza la prueba de esfericidad de Bartlett
+resultado_bartlett <- cortest.bartlett(matriz_correlacion, n = nrow(datos))
+
+# Muestra los resultados
+print(resultado_bartlett)
+```
+
+----
+
+```{r}
+#| echo: true
+
+# Calcula el estadístico de Kaiser - Meier - Olkin
+KMO(matriz_correlacion)
+```
+
+## Demostración Práctica de AFE y AFC en R {.smaller}
+
+<hr>
+
+
+```{r}
+#| echo: true
+
+# Realiza el AFE utilizando la función "fa"
+resultados_afe <- fa(datos,
+                     nfactors = 3,
+                     rotate = "varimax")
+```
+
+
+```{r}
+#| echo: true
+
+# Muestra los resultados del AFE
+print(resultados_afe)
+```
+
+----
+
+```{r}
+#| echo: true
+
+# Plotea un gráfico de scree para visualizar la varianza explicada por cada factor
+psych::scree(datos)
+```
+
+----
+
+```{r}
+#| echo: true
+#| eval: false
+
+# Plotea un gráfico de cargas factoriales
+psych::fa.diagram(resultados_afe)
+```
+
+## Demostración Práctica de AFE y AFC en R {.smaller}
+
+<hr>
+
+```{r}
+#| echo: true
+
+# Instala y carga el paquete "lavaan" si aún no está instalado
+# install.packages("lavaan")
+library(lavaan)
+
+# Definición del modelo de AFC
+modelo <- ' visual  =~ x1 + x2 + x3 
+              textual =~ x4 + x5 + x6
+              speed   =~ x7 + x8 + x9 '
+
+# Realiza el análisis factorial confirmatorio
+resultado_afc <- cfa(modelo, data = HolzingerSwineford1939)
+
+# Muestra los resultados del AFC
+summary(resultado_afc)
+```
+
+----
+
+```{r}
+#| echo: true
+
+# Plotea el modelo
+semPlot::semPaths(resultado_afc, "est", fixedStyle = FALSE)
+```
+
+----
+
+```{r}
+#| echo: true
+
+# Plotea el modelo
+semPlot::semPaths(resultado_afc, "std", fixedStyle = FALSE)
+```
+
+
+
+# {background-color="#000000" background="#43464B" }
+
+::: r-fit-text
+¿Preguntas?
+:::
+
+## `r fontawesome::fa("mug-saucer", "white")` Hagamos una pausa {background-color="#000000" background="#43464B"}
+
+<hr>
+
+::: r-fit-text
+<center>
+
+Tomemos un descanso de `5 minutos`...
+
+Estire las piernas `r fontawesome::fa("person-walking", "white")`...
+
+Deje de ver las pantallas `r fontawesome::fa("laptop", "white")`...
+
+... cualquier `r fontawesome::fa("laptop", "white")`, las del celular `r fontawesome::fa("mobile", "white")` también.
+
+</center>
+:::
+
+#  {background-color="#000000"}
+

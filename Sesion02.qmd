@@ -1,0 +1,858 @@
+---
+format: 
+  revealjs: 
+    embed-resources: true
+    # theme: theme/slides.scss
+    # css: [theme/syntax-highlight.css, theme/custom.css, theme/pacman.css]
+    css: theme.css
+    toc: false
+    footer: "Metodología de Investigación y Validación de Instrumentos con R"
+    logo: img/image.png
+    transition: fade
+    background-transition: fade
+    incremental: false
+    slide-number: c/t
+    height: 900
+    width: 1600
+    chalkboard: false
+    controls: false
+    highlight-style: ayu-mirage
+    multiplex: true
+    touch: true
+    auto-stretch: true
+    link-external-icon: false
+    link-external-newwindow: false
+    self-contained-math: true
+    preview-links: true
+    menu:
+      side: left
+      width: normal
+      numbers: true
+from: markdown+emoji
+execute:
+  echo: false
+  freeze: auto
+cache: true
+---
+
+#  {background="#43464B" background-image="img/p10.png"}
+
+\
+\
+\
+\
+\
+\
+
+<h1>[Sesión 02]{.blanco}</h1>
+
+<h4>Diseño y construcción de encuestas</h4>
+
+<hr>
+
+<h3>[Christian Vásquez-Velasco, Bach., M.Sc.(c)]{.blanco}</h3>
+
+<h4>[2023]{.blanco}</h4>
+
+![](img/image.png){.absolute top="150" left="950"}
+
+::: footer
+[Curso: Metodología de Investigación y Validación de Instrumentos con R]{.blanco}
+:::
+
+## Objetivos de la Sesión
+
+<hr>
+
+
+::: {.incremental}
+- Comprender la importancia del diseño de encuestas en la investigación y la toma de decisiones.
+- Identificar y comprender los diferentes tipos de preguntas utilizados en encuestas.
+- Aprender a redactar preguntas de manera clara y efectiva.
+- Reconocer las consideraciones éticas en la elaboración de encuestas.
+- Comprender los principios de diseño de cuestionarios, incluyendo la estructura, secuencia lógica y fluidez.
+- Aplicar los conceptos aprendidos en la práctica a través de la creación de un cuestionario utilizando R.
+:::
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 1. Definición y objetivos de las encuestas (15 minutos)
+
+<hr>
+
+- Definición de encuestas y su utilidad en la recopilación de datos.
+- Objetivos de las encuestas en el contexto de la investigación.
+
+### 2. Tipos de preguntas (15 minutos)
+
+<hr>
+
+- Preguntas abiertas y su utilidad.
+- Preguntas cerradas y su variedad (de opción múltiple, verdadero/falso, escala Likert, etc.).
+- Ventajas y desventajas de cada tipo de pregunta.
+
+### 3. Redacción adecuada de preguntas (15 minutos)
+
+<hr>
+
+- Principios de redacción de preguntas claras y concisas.
+- Evitar sesgo y ambigüedad en las preguntas.
+- Ejemplos de buenas y malas redacciones.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+
+### 4. Consideraciones éticas en la elaboración de encuestas (15 minutos)
+
+<hr>
+
+- Privacidad y consentimiento informado de los encuestados.
+- Ética en la formulación de preguntas sensibles.
+- La importancia de la confidencialidad de los datos.
+
+### 5. Diseño de cuestionarios (20 minutos)
+
+<hr>
+
+- Estructura de un cuestionario: introducción, preguntas principales y cierre.
+- Secuencia lógica de las preguntas para minimizar sesgos.
+- Mantener la fluidez y la coherencia en el cuestionario.
+
+### 6. Práctica: Creación de un cuestionario utilizando R (30 minutos)
+
+<hr>
+
+- Demostración en vivo de cómo crear un cuestionario básico en R.
+- Instrucciones paso a paso para que los participantes creen su propio cuestionario.
+- Compartir ejemplos de código en R para la creación de preguntas.
+
+## Agenda de la Sesión {.smaller}
+
+<hr>
+
+### 7. Preguntas y Debate (10 minutos)
+
+<hr>
+
+- Invitar a los participantes a plantear preguntas y discutir los conceptos y la práctica.
+
+#  Definición y Objetivos de las Encuestas
+
+<hr>
+
+## Introducción
+
+<hr>
+
+Las encuestas son una herramienta valiosa en la investigación y recopilación de datos. En esta sección, exploraremos qué son las encuestas y por qué son fundamentales en el contexto de la investigación.
+
+
+## Definición de Encuestas
+
+<hr>
+
+::: {.incremental}
+- Las encuestas son una técnica de recopilación de datos que implica hacer preguntas específicas a un grupo de individuos con el propósito de obtener información sobre sus opiniones, actitudes, creencias, comportamientos u otras variables de interés.
+
+- Son una de las herramientas más comunes para recopilar datos cuantitativos y cualitativos de manera estructurada.
+:::
+
+## Utilidad de las Encuestas en la Recopilación de Datos
+
+<hr>
+
+::: {.incremental}
+- **Amplia Aplicabilidad:** Las encuestas se pueden utilizar en una variedad de campos, desde la investigación académica hasta la toma de decisiones empresariales y gubernamentales. Son versátiles y se pueden adaptar a diversas necesidades de recopilación de datos.
+
+- **Eficiencia en la Recopilación de Datos:** Permiten recopilar datos de un gran número de participantes en un corto período de tiempo. Esto las hace eficientes para obtener una visión general de las opiniones y actitudes de una población.
+
+- **Estructura y Control:** Las encuestas ofrecen un alto grado de estructura y control en la recopilación de datos. Las preguntas se formulan de manera consistente para todos los participantes, lo que facilita la comparación y el análisis.
+:::
+
+## Objetivos de las Encuestas en el Contexto de la Investigación
+
+<hr>
+
+::: {.incremental}
+- **Exploración y Descripción:** Uno de los objetivos fundamentales de las encuestas es explorar y describir un fenómeno o población en particular. Proporcionan una instantánea de las características, actitudes o comportamientos de interés en un momento dado.
+
+- **Confirmación de Hipótesis:** Las encuestas también se utilizan para confirmar o refutar hipótesis de investigación. Pueden proporcionar evidencia cuantitativa que respalde o cuestione las suposiciones previas.
+
+- **Monitoreo y Evaluación:** En algunos casos, las encuestas se utilizan para el seguimiento y la evaluación continua de programas, políticas o intervenciones. Esto ayuda a medir el impacto a lo largo del tiempo.
+
+- **Toma de Decisiones Basada en Datos:** Finalmente, las encuestas se utilizan para recopilar datos que respalden la toma de decisiones informadas. Ya sea en el ámbito educativo, empresarial o gubernamental, los datos de las encuestas pueden guiar las decisiones estratégicas.
+:::
+
+## Conclusiones
+
+<hr>
+
+
+En resumen, las encuestas son una herramienta poderosa para recopilar datos en investigación. Su versatilidad y capacidad para proporcionar información estructurada hacen que sean esenciales en una variedad de contextos. Comprender cómo diseñar y administrar encuestas efectivas es crucial para el éxito en la investigación y la toma de decisiones informadas.
+
+# Tipos de Preguntas
+
+<hr>
+
+
+## Introducción
+
+<hr>
+
+En esta sección, exploraremos los diferentes tipos de preguntas que puedes encontrar al diseñar una encuesta. Cada tipo de pregunta tiene sus propias ventajas y desventajas, y es importante seleccionar el tipo adecuado para recopilar los datos deseados de manera efectiva.
+
+## Preguntas Abiertas y su Utilidad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+
+**Definición:** Las preguntas abiertas son aquellas que permiten a los participantes responder en sus propias palabras, sin restricciones de elección. Por ejemplo, "¿Cuál es su opinión sobre el nuevo programa de estudios?"
+:::
+
+::: {.fragment .fade-in}
+**Utilidad:** Las preguntas abiertas son ideales cuando deseas obtener respuestas detalladas y ricas en contexto. Pueden revelar perspectivas únicas y proporcionar información cualitativa valiosa.
+:::
+
+## Preguntas Abiertas y su Utilidad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+**Ventajas:**
+:::
+
+::: {.incremental}
+
+- Capturan opiniones individuales y matices.
+- Fomentan respuestas en profundidad.
+- Útiles para explorar temas complejos y nuevos.
+:::
+
+::: {.fragment .fade-in}
+**Desventajas:**
+:::
+
+::: {.incremental}
+
+- Requieren más tiempo para analizar.
+- Dificultan la estandarización de respuestas.
+- Los datos pueden ser subjetivos y difíciles de cuantificar.
+:::
+
+## Preguntas Cerradas y su Variedad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+
+**Definición:** Las preguntas cerradas ofrecen opciones predefinidas para que los participantes elijan. Pueden tomar varias formas, como preguntas de opción múltiple, verdadero/falso, escala Likert, entre otras.
+:::
+
+## Preguntas Cerradas y su Variedad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+**Preguntas de Opción Múltiple:** Los participantes eligen una respuesta de una lista de opciones. Por ejemplo, "¿Qué edad tiene? - Menos de 18, 18-24, 25-34, 35-44, 45 o más."
+:::
+
+::: {.fragment .fade-in}
+**Ejemplo:**
+
+¿Qué tipo de películas prefiere? (Seleccione una)
+
+ - Acción
+
+ - Comedia
+
+ - Drama
+
+ - Ciencia ficción
+
+:::
+
+## Preguntas Cerradas y su Variedad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+**Preguntas de Verdadero/Falso:** Los participantes indican si una declaración es verdadera o falsa.
+:::
+
+::: {.fragment .fade-in}
+**Ejemplo:**
+
+El sol es una estrella.
+
+ - Verdadero
+
+ - Falso
+
+:::
+
+## Preguntas Cerradas y su Variedad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+**Preguntas de Escala Likert:** Los participantes expresan su acuerdo o desacuerdo con afirmaciones en una escala, como "Totalmente en desacuerdo - En desacuerdo - Neutral - De acuerdo - Totalmente de acuerdo."
+:::
+
+::: {.fragment .fade-in}
+**Ejemplo:**
+
+Por favor, indique su acuerdo con la siguiente afirmación: "El sistema actual de evaluación es justo".
+
+ - Totalmente en desacuerdo
+
+ - En desacuerdo
+
+ - Neutral
+
+ - De acuerdo
+
+ - Totalmente de acuerdo
+
+:::
+
+## Preguntas Cerradas y su Variedad
+
+<hr>
+
+
+::: {.fragment .fade-in}
+**Ventajas:**
+:::
+
+::: {.incremental}
+
+- Fáciles de analizar y cuantificar.
+- Rápidas de responder, lo que permite encuestas más cortas.
+- Adecuadas para medir actitudes y opiniones de manera estandarizada.
+:::
+
+::: {.fragment .fade-in}
+**Desventajas:**
+:::
+
+::: {.incremental}
+
+- Pueden limitar la expresión de matices.
+- No permiten respuestas fuera de las opciones proporcionadas.
+- No revelan profundidad de opinión.
+:::
+
+## Conclusiones
+
+<hr>
+
+La elección entre preguntas abiertas y cerradas depende de los objetivos de tu encuesta y la naturaleza de los datos que deseas recopilar. A menudo, una combinación de ambos tipos de preguntas puede proporcionar una visión más completa y equilibrada de los temas de investigación. Recuerda que la formulación precisa de las preguntas es esencial para obtener resultados válidos y confiables.
+
+# Redacción Adecuada de Preguntas
+
+<hr>
+
+
+## Introducción
+
+<hr>
+
+Una parte esencial de diseñar una encuesta efectiva es redactar preguntas claras y concisas. Las preguntas mal formuladas pueden llevar a respuestas inexactas o sesgadas, lo que puede afectar negativamente los resultados de tu investigación. En esta sección, exploraremos los principios clave para redactar preguntas de manera efectiva y veremos ejemplos de buenas y malas redacciones.
+
+## Principios de Redacción de Preguntas Claras y Concisas {.smaller}
+
+<hr>
+
+::: {.fragment .fade-in}
+
+**Simplicidad:** Mantén las preguntas simples y directas. Evita usar lenguaje técnico o palabras complicadas que puedan confundir a los participantes.
+
+Ejemplo de pregunta clara: "¿Con qué frecuencia haces ejercicio?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Específicas:** Sé específico en lo que estás preguntando. Evita preguntas vagas o ambiguas que puedan tener múltiples interpretaciones.
+
+Ejemplo de pregunta específica: "¿Cuántos libros has leído en el último mes?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Unicidad:** Cada pregunta debe abordar un solo concepto o tema. Evita hacer preguntas compuestas que involucren varios temas a la vez.
+
+Ejemplo de pregunta única: "¿Estás satisfecho con tu trabajo actual?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Evitar doble negación:** Las preguntas con doble negación, como "¿No estás en desacuerdo con esta declaración?", pueden ser confusas. Evita usarlas.
+
+Ejemplo de pregunta sin doble negación: "¿Estás de acuerdo con esta declaración?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Orden lógico:** Organiza las preguntas en un orden lógico y coherente. Comienza con preguntas más simples antes de abordar temas más complejos.
+
+Ejemplo de orden lógico: Comienza preguntando sobre datos demográficos antes de entrar en detalles sobre experiencias personales.
+
+:::
+
+## Evitar Sesgo y Ambigüedad en las Preguntas
+
+<hr>
+
+::: {.fragment .fade-in}
+
+**Sesgo:** Evita formular preguntas que sugieran una respuesta deseada. Las preguntas sesgadas pueden influir en las respuestas de los participantes.
+
+Ejemplo de pregunta sesgada: "¿No crees que nuestro nuevo programa de capacitación es efectivo?"
+:::
+
+::: {.fragment .fade-in}
+
+
+**Ambigüedad:** Elimina cualquier ambigüedad en las preguntas. Las palabras o frases ambiguas pueden llevar a respuestas incorrectas.
+
+Ejemplo de pregunta ambigua: "¿Con qué frecuencia haces ejercicio en casa?"
+
+:::
+
+## Ejemplos de Buenas y Malas Redacciones
+
+<hr>
+
+::: {.fragment .fade-in}
+
+**Mala Redacción:** "¿No te parece que el aumento salarial debería ser implementado inmediatamente?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Buena Redacción:** "¿Cuál es tu opinión sobre la implementación inmediata de un aumento salarial?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Mala Redacción:** "¿Cuántas veces al día no comes comida rápida?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Buena Redacción:** "¿Con qué frecuencia consumes comida rápida en un día?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Mala Redacción:** "¿No estás de acuerdo en que nuestro servicio al cliente es el mejor?"
+
+:::
+
+::: {.fragment .fade-in}
+
+**Buena Redacción:** "¿Cómo evaluarías nuestro servicio al cliente en una escala del 1 al 5, siendo 5 la mejor calificación posible?"
+
+:::
+
+## Conclusiones
+
+<hr>
+
+La redacción adecuada de preguntas es esencial para obtener datos precisos y confiables en una encuesta. Al seguir los principios de simplicidad, especificidad y evitar sesgo y ambigüedad, puedes garantizar que tus preguntas sean comprensibles y no influencien las respuestas de los participantes. Siempre es útil revisar y probar las preguntas con un grupo piloto antes de realizar la encuesta completa para identificar y corregir posibles problemas de redacción.
+
+
+# Consideraciones éticas en la elaboración de encuestas
+
+<hr>
+
+
+## Introducción
+
+<hr>
+
+La privacidad es una consideración fundamental al realizar encuestas en el ámbito de la investigación. Aquí hay algunos puntos clave para abordar:
+
+## Privacidad y Consentimiento Informado de los Encuestados
+
+::: {.fragment .fade-in}
+
+**Consentimiento Informado:** Antes de recopilar datos, es esencial obtener el consentimiento informado de los participantes. Esto significa que deben comprender completamente el propósito de la encuesta, cómo se utilizarán sus respuestas y que su participación es voluntaria.
+
+
+:::
+
+::: {.fragment .fade-in}
+**Anonimato y Confidencialidad:** Asegura que los datos recopilados se mantengan anónimos y confidenciales. Esto significa que las respuestas individuales no deben vincularse con la identidad de los encuestados, a menos que se haya obtenido un consentimiento explícito para hacerlo.
+:::
+
+## Ética en la Formulación de Preguntas Sensibles
+
+<hr>
+
+Algunas encuestas pueden incluir preguntas sobre temas sensibles, como salud mental, orientación sexual o creencias religiosas. Aquí hay consideraciones éticas importantes:
+
+
+::: {.fragment .fade-in}
+
+**No Obligar a Responder:** Nunca se debe obligar a los encuestados a responder preguntas sensibles. Deben tener la opción de omitir cualquier pregunta que les haga sentir incómodos.
+
+:::
+
+::: {.fragment .fade-in}
+**Redacción Cuidadosa:** Formula preguntas sobre temas sensibles de manera imparcial y no sugestiva. Evita cualquier lenguaje que pueda inducir a sesgos o prejuicios.
+:::
+
+::: {.fragment .fade-in}
+
+**Garantiza la Utilidad de los Datos:** Asegúrate de que las preguntas sobre temas sensibles tengan un propósito claro en tu investigación y que la información recopilada se utilice de manera ética y responsable.
+:::
+
+## Confidencialidad de los Datos
+
+<hr>
+
+La confidencialidad de los datos es esencial para mantener la confianza de los encuestados y proteger su privacidad. Aquí hay algunas pautas éticas clave:
+
+
+::: {.fragment .fade-in}
+
+**Almacenamiento Seguro:** Los datos deben almacenarse de manera segura y protegerse contra el acceso no autorizado. Utiliza sistemas de almacenamiento en línea seguros o cifra los datos si es necesario.
+
+:::
+
+::: {.fragment .fade-in}
+**Uso Responsable:** Utiliza los datos recopilados solo para los fines especificados en la encuesta y garantiza que no se utilicen de manera indebida o se compartan con terceros sin el consentimiento de los encuestados.
+
+:::
+
+::: {.fragment .fade-in}
+
+**Eliminación Segura:** Si los datos ya no son necesarios, elimínalos de manera segura para garantizar que no se puedan recuperar.
+
+:::
+
+## Conclusiones
+
+<hr>
+
+Abordar estas consideraciones éticas es fundamental para llevar a cabo una investigación con integridad y respeto hacia los participantes de la encuesta.
+
+# Diseño de Cuestionarios
+
+<hr>
+
+
+## Introducción
+
+<hr>
+
+El diseño de un cuestionario es una parte crítica de la recopilación de datos. Un cuestionario bien diseñado facilita la obtención de respuestas precisas y significativas. Aquí tienes información relevante para esta sección:
+
+## Estructura de Cuestionario
+
+<hr>
+
+
+::: {.fragment .fade-in}
+
+**Introducción:** La introducción del cuestionario es la primera impresión que los encuestados tienen. Debe ser amigable y clara, estableciendo el propósito de la encuesta y la importancia de las respuestas del encuestado. También se debe incluir una declaración de consentimiento si es necesario.
+
+:::
+
+::: {.fragment .fade-in}
+**Preguntas Principales:** Estas son las preguntas centrales que recopilarán la información que necesitas. Agrupa las preguntas por temas relacionados para mantener la coherencia. Comienza con preguntas fáciles y no amenazantes para que los encuestados se sientan cómodos.
+:::
+
+::: {.fragment .fade-in}
+
+**Cierre:** La conclusión del cuestionario debe agradecer a los encuestados por su tiempo y esfuerzo. Si es relevante, puedes proporcionar información sobre cómo se utilizarán los resultados y cuándo estarán disponibles.
+:::
+
+
+## Secuencia Lógica de las Preguntas
+
+<hr>
+
+
+::: {.incremental}
+
+- La secuencia de preguntas debe ser lógica y coherente. Comienza con preguntas generales y de calentamiento antes de avanzar hacia preguntas más específicas.
+- Evita saltos innecesarios entre temas, ya que esto puede confundir a los encuestados. Si debes cambiar de tema, asegúrate de que la transición sea suave.
+- Coloca las preguntas más sensibles o personales hacia el final del cuestionario para que los encuestados se sientan más cómodos a medida que avanzan.
+
+:::
+
+## Mantener la Fluidez y la Coherencia
+
+<hr>
+
+
+::: {.incremental}
+
+- Utiliza un lenguaje claro y sencillo. Evita jergas, tecnicismos o palabras ambiguas que puedan llevar a malentendidos.
+
+- Mantén un formato y estilo de preguntas coherentes en todo el cuestionario. Esto facilita la comprensión y evita confusiones.
+
+- Evita preguntas dobles que puedan llevar a respuestas ambiguas. Cada pregunta debe abordar un solo tema o concepto.
+
+- Utiliza una variedad de tipos de preguntas según sea necesario (abiertas, cerradas, de escala Likert) para recopilar la información deseada.
+
+- Realiza pruebas piloto del cuestionario con un grupo pequeño de personas antes de distribuirlo ampliamente. Esto te ayudará a identificar problemas de redacción, sesgos o preguntas confusas que deban corregirse.
+
+:::
+
+
+## Conclusiones
+
+<hr>
+
+Un cuestionario bien diseñado es esencial para recopilar datos precisos y valiosos. Además, asegura que los encuestados se sientan cómodos y motivados para participar en la encuesta.
+
+# Práctica: Creación de un Cuestionario Utilizando R
+
+<hr>
+
+## Introducción
+
+<hr>
+
+En esta parte de la sesión, vamos a sumergirnos en la creación práctica de un cuestionario utilizando el lenguaje de programación R. R es una herramienta poderosa para diseñar y analizar encuestas.
+
+## R {.smaller}
+
+<hr>
+
+::: columns
+::: {.column width="50%"}
+![](img/R_logo.svg.png){.absolute top="100" left="50" height="400"}
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+::: incremental
+-   R es un lenguaje de programación utilizado en el análisis estadístico y la visualización de datos.
+-   Fue creado en 1993 por Ross Ihaka y Robert Gentleman en la Universidad de Auckland, Nueva Zelanda.
+-   R es un software libre y de código abierto.
+-   R cuenta con una gran cantidad de paquetes que se utilizan para realizar tareas específicas en el análisis de datos.
+-   R tiene una sintaxis fácil de aprender y es utilizado tanto por científicos de datos como por estadísticos, ingenieros y profesionales de negocios.
+:::
+:::
+:::
+
+## Ventajas de R {.smaller}
+
+<hr>
+
+::: incremental
+-    La licencia es libre.
+-    El código fuente de R está diseñado para asegurar dar soluciones a medida y ser incrustado dentro de otras aplicaciones. El código abierto tiene la ventaja de ser ampliamente revisado por pares en journals y en la literatura científica.
+-    Esto significa que los errores pueden ser encontrados, la información compartida y las soluciones enviadas de manera transparente. 
+-    Gran variedad de materiales de entrenamiento disponibles en forma de libros, manuales y recursos audiovisuales. 
+-    Es posible crear excelentes gráficos con relativa facilidad. Los más recientes algoritmos y métodos estadísticos están disponibles en R. Esto es debido principalmente a que la mayoría de los investigadores lo usan en sus publicaciones ya que la estructura de paquetes que usa el R hace que sea más fácil crear, y difundir, nuevas librerías y funciones en comparación con otros programas.
+-    Posee algoritmos que usualmente son usados en campos biológicos y que difícilmente están disponibles en otros lenguajes de programación.
+-    Es compatible con varios interfaces disponibles en el mercado que permite que se pueda trabajar con otros programas comerciales y de uso libre.
+-   Permite procesar datos bajo diversos formatos de archivos así como distintas bases de datos pueden ser usadas directamente con R y conectadas por las funciones dentro de los mismos paquetes de R, o transformadas a un formato intermedio para ser importados.
+:::
+
+## Tidyverse {.smaller}
+
+<hr>
+
+::: columns
+::: {.column width="50%"}
+![](img/tidyverse-logo.png){.absolute top="100" left="50" height="400"}
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+::: incremental
+-   Tidyverse es un conjunto de paquetes de software de análisis de datos en el lenguaje de programación R, que se utilizan para manipular, visualizar y modelar datos.
+-   Estos paquetes comparten una filosofía común y una sintaxis consistente, lo que hace que sea fácil trabajar con ellos en conjunto.
+-   Los paquetes que forman parte de Tidyverse incluyen dplyr, ggplot2, tidyr, readr, purrr, tibble, stringr, forcats, entre otros.
+:::
+:::
+:::
+
+## Tidymodels {.smaller}
+
+<hr>
+
+::: columns
+::: {.column width="50%"}
+![](img/tidymodels.png){.absolute top="100" left="50" height="400"}
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+::: incremental
+-   Tidymodels es un conjunto de paquetes de software de modelado estadístico en el lenguaje de programación R que se utilizan para construir, ajustar, validar y analizar modelos predictivos.
+-   El objetivo principal de Tidymodels es proporcionar herramientas para ayudar a los usuarios a realizar modelado estadístico de manera más eficiente y efectiva, utilizando técnicas modernas de modelado y validación..
+-   Los paquetes que forman parte de Tidymodels incluyen recipes, parsnip, yardstick, dials, infer, entre otros.
+:::
+:::
+:::
+
+## Ejemplos de Código en R
+
+<hr>
+
+**Instala y carga las bibliotecas necesarias:**
+
+Asegúrate de tener instaladas y cargadas las bibliotecas necesarias, como shiny para crear la interfaz de usuario y writexl para escribir los datos en un archivo Excel. Además, necesitarás la biblioteca shinyWidgets para agregar preguntas en escala de Likert. Puedes instalar estas bibliotecas si aún no las tienes:
+
+```{r}
+#| echo: true
+
+#install.packages("shiny")
+#install.packages("writexl")
+#install.packages("shinyWidgets")
+library(shiny)
+library(writexl)
+library(shinyWidgets)
+```
+
+
+---------
+
+**Crea la interfaz de usuario Shiny:**
+
+Utiliza la función shinyApp() para crear una aplicación Shiny que incluya los elementos necesarios para tu formulario. A continuación, se muestra un ejemplo que incluye preguntas cerradas, preguntas de verdadero o falso, preguntas en escala de Likert y preguntas abiertas:
+
+```{r}
+#| echo: true
+
+ui <- fluidPage(
+  # Encabezado del cuestionario
+  headerPanel("Cuestionario de Satisfacción del Cliente"),
+  
+  # Introducción ética
+  HTML("<p>Este cuestionario tiene como objetivo conocer su opinión y satisfacción con respecto a nuestros productos y servicios. Sus respuestas son fundamentales para mejorar nuestros productos y brindarle un mejor servicio en el futuro.</p>
+  <p>Su participación es voluntaria y todas las respuestas serán tratadas de manera confidencial. No se recopilará ninguna información personal identificable en este cuestionario. Por favor, responda con honestidad y sinceridad para que podamos comprender mejor sus necesidades y expectativas.</p>
+  <p>Gracias por tomarse el tiempo para completar este cuestionario. Sus comentarios son muy valiosos para nosotros.</p>"),
+  
+  # Pregunta cerrada de selección única
+  selectInput("pregunta1", "¿Qué color prefieres?",
+              choices = c("Rojo", "Verde", "Azul")),
+
+  # Pregunta cerrada de selección múltiple
+  checkboxGroupInput("pregunta2", "Selecciona tus pasatiempos favoritos:",
+                     choices = c("Deportes", "Lectura", "Viajar")),
+
+  # Pregunta de verdadero o falso
+  radioButtons("pregunta3", "¿Es esto cierto o falso?",
+               choices = c("Cierto", "Falso")),
+
+  # Pregunta en escala de Likert
+  selectInput("pregunta4", "Califica tu satisfacción:",
+            choices = c("Muy insatisfecho", "Insatisfecho", "Neutral", "Satisfecho", "Muy satisfecho")),
+
+  # Pregunta abierta
+  textInput("pregunta5", "¿Qué sugerencias tienes para nosotros?"),
+
+  # Botón para enviar respuestas
+  actionButton("enviar", "Enviar Respuestas")
+)
+
+```
+
+
+---------
+
+**Crea el servidor Shiny:**
+
+En el servidor Shiny, define cómo se deben manejar las respuestas y cómo se guardarán en un archivo Excel. Por ejemplo:
+
+```{r}
+#| echo: true
+
+server <- function(input, output) {
+  # Almacena las respuestas en un data frame
+  respuestas <- reactive({
+    data.frame(
+      Pregunta1 = input$pregunta1,
+      Pregunta2 = paste(input$pregunta2, collapse = ", "),
+      Pregunta3 = input$pregunta3,
+      Pregunta4 = input$pregunta4,
+      Pregunta5 = input$pregunta5
+    )
+  })
+
+  # Observa el botón de envío y guarda las respuestas en un archivo Excel
+  observeEvent(input$enviar, {
+    write_xlsx(respuestas(), "respuestas.xlsx")
+  })
+}
+
+```
+
+--------------
+
+**Ejecuta la aplicación Shiny:**
+
+Ejecuta la aplicación Shiny con shinyApp(ui, server).
+
+```{r}
+#| echo: true
+
+shinyApp(ui, server)
+```
+
+-----
+
+Con estos pasos, habrás creado un formulario en R que permite a los usuarios responder preguntas cerradas, preguntas de verdadero o falso, preguntas en escala de Likert y preguntas abiertas. Cuando hagan clic en "Enviar Respuestas", se guardarán en un archivo Excel llamado "respuestas.xlsx" en el directorio de trabajo actual.
+
+Ten en cuenta que este es un ejemplo básico y puedes personalizarlo según tus necesidades específicas, como agregar más preguntas o incluir validaciones adicionales.
+
+# {background-color="#000000" background="#43464B" }
+
+::: r-fit-text
+¿Preguntas?
+:::
+
+## `r fontawesome::fa("mug-saucer", "white")` Hagamos una pausa {background-color="#000000" background="#43464B"}
+
+<hr>
+
+::: r-fit-text
+<center>
+
+Tomemos un descanso de `5 minutos`...
+
+Estire las piernas `r fontawesome::fa("person-walking", "white")`...
+
+Deje de ver las pantallas `r fontawesome::fa("laptop", "white")`...
+
+... cualquier `r fontawesome::fa("laptop", "white")`, las del celular `r fontawesome::fa("mobile", "white")` también.
+
+</center>
+:::
+
+#  {background-color="#000000"}
+
